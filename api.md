@@ -352,7 +352,7 @@ Third-Party APIs are services provided by external companies that you can integr
 
 ```javascript
 async function getWeather(city) {
-  const API_KEY = "YOUR_API_KEY";
+  const API_KEY = "";
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`

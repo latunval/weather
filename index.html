@@ -1,27 +1,20 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-    <p id="page">Hello RestFul APIs</p>
-    <button onclick="Show()">Show</button>
-    <br>
-    <h4 id="load"></h4>
-<p id="text"></p>
-<p class="p" id="error"></p>
-    <input type="text" name="fname" id="fname">
-    <br>
-    <button onclick="Save()">save</button>
-<!-- </div> -->
-<input type="text" name="work" id="work">
-<input type="text" name="work" id="lname">
-<input type="text" name="work" id="user">
-<button onclick="add()">Add</button>
+<div class="container">
+    <div class="btn">
+    <input type="text" name="text" id="text" placeholder="Search for your city">
+    <button id="search">Search</button></div>
+    <p>Weather in your Area: <span id="city"></span></p>
+    <p>Temperature: <span id="tem"></span></p>
+    <p>description: <span id="des"></span></p>
+    <p>Humidity: <span id="hum"></span>%</p>
 </div>
 
     <script src="/script.js"></script>
