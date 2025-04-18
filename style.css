@@ -60,6 +60,9 @@
   }
   
   @media screen and (max-width: 768px) {
+    body {
+      background-image: url(/download.jpg);
+    }
     .container {
       width: 90%;
       padding: 15px;
