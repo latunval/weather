@@ -14,7 +14,7 @@ async function getWeather(city) {
     );
     const data = await response.json();
 
-    if (data.cod === "404") {
+    if (!data) {
       alert("City not found!");
       return;
     }
@@ -24,14 +24,15 @@ async function getWeather(city) {
     des.innerHTML = data.weather[0].description;
     humidity.innerHTML = data.main.humidity + "%";
 
-    console.log(`Weather in ${city}:`);
-    console.log("Temperature:", data.main.temp, "°C");
-    console.log("Description:", data.weather[0].description);
-    console.log("Humidity:", data.main.humidity, "%");
+    // console.log(`Weather in ${city}:`);
+    // console.log("Temperature:", data.main.temp, "°C");
+    // console.log("Description:", data.weather[0].description);
+    // console.log("Humidity:", data.main.humidity, "%");
 
   } catch (error) {
     console.error("Error fetching weather:", error);
-    alert("Failed to fetch weather data.");
+    alert("Failed to fetch weather location.");
+    window.location.reload()
   }
 }
 
